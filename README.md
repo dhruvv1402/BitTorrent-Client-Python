@@ -1,7 +1,3 @@
-Here’s a professional and engaging repository description for your BitTorrent client project:
-
----
-
 # BitTorrent Client in Python 🐍
 
 A lightweight, asynchronous BitTorrent client implemented in Python. This project demonstrates the core functionality of the BitTorrent protocol, including peer communication, piece management, and file downloading.
