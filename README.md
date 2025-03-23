@@ -62,5 +62,3 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
-
-This description is concise, informative, and highlights the key aspects of your project. It also provides clear instructions for users to get started and contribute. Let me know if you'd like to tweak it further! 🚀
