@@ -26,7 +26,7 @@ class BitTorrentClient:
 
             await asyncio.gather(*[
                 self._handle_peer(peer, task)
-                for peer in peers[:10]  # Limit concurrent peers
+                for peer in peers[:10] 
             ])
 
     async def _handle_peer(self, peer: tuple, task):
