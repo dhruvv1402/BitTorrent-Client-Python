@@ -47,8 +47,8 @@ class Tracker:
         return self._decode_peers(response.content)
 
     async def _contact_udp_tracker(self, url: str) -> List[Tuple[str, int]]:
-        # UDP tracker implementation
-        pass  # Implement UDP tracker logic
+        
+        pass  
 
     def _decode_peers(self, data: bytes) -> List[Tuple[str, int]]:
         peers = []
