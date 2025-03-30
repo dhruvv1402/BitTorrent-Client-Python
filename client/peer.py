@@ -5,7 +5,7 @@ import struct
 from typing import Optional, Tuple
 
 class PeerConnection:
-    CHUNK_SIZE = 16 * 1024  # 16KB blocks
+    CHUNK_SIZE = 16 * 1024 
 
     def __init__(self, peer: Tuple[str, int], torrent, piece_manager):
         self.peer = peer
@@ -49,10 +49,10 @@ class PeerConnection:
             header = await self.reader.readexactly(4)
             length = struct.unpack(">I", header)[0]
             if length == 0:
-                continue  # Keep-alive
+                continue  
 
             message_id = await self.reader.read(1)
-            if message_id == b'\x05':  # Bitfield
+            if message_id == b'\x05':  
                 bitfield = await self.reader.readexactly(length - 1)
                 self.bitfield = bitfield
                 break
@@ -74,8 +74,8 @@ class PeerConnection:
 
     async def _request_block(self, piece_index: int, offset: int):
         message = struct.pack(">IBHIII",
-                              13,  # Length
-                              6,   # Request
+                              13, 
+                              6,   
                               piece_index,
                               offset,
                               self.CHUNK_SIZE)
@@ -89,7 +89,7 @@ class PeerConnection:
                 continue
 
             message_id = await self.reader.read(1)
-            if message_id == b'\x07':  # Piece
+            if message_id == b'\x07': 
                 piece = await self.reader.readexactly(response_length - 1)
                 return piece[8:]
 
