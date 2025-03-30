@@ -34,14 +34,14 @@ class Torrent:
 
     def _process_files(self) -> None:
         if "files" in self.info:
-            # Multi-file mode
+            
             base_path = Path(self.info["name"])
             for file_info in self.info["files"]:
                 path = base_path / Path(*file_info["path"])
                 self.files.append(File(path, file_info["length"]))
                 self.total_size += file_info["length"]
         else:
-            # Single file mode
+           
             path = Path(self.info["name"])
             self.files.append(File(path, self.info["length"]))
             self.total_size = self.info["length"]
