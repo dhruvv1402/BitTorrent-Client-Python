@@ -37,7 +37,7 @@ class PieceManager:
             self.pieces[index].reset()
 
     def _save_piece(self, index: int, data: bytes):
-        # Implement file storage logic
+       
         pass
 
 class Piece:
