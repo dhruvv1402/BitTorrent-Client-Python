@@ -1,6 +1,6 @@
 ---
 
-# BitTorrent Client in Python
+## BitTorrent Client in Python
 
 Just a small BitTorrent client made in Python. It connects to peers, downloads pieces, checks them, and puts the file back together. Mainly built to get a feel for how torrents actually work under the hood.
 
