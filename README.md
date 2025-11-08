@@ -1,10 +1,8 @@
----
-
-## BitTorrent Client in Python
+## BitTorrent Client in Python (basic idea)
 
 Just a small BitTorrent client made in Python. It connects to peers, downloads pieces, checks them, and puts the file back together. Mainly built to get a feel for how torrents actually work under the hood.
 
-## What it does
+## its JOB
 
 * Talks to trackers and finds peers
 * Downloads file pieces using asyncio
@@ -12,7 +10,7 @@ Just a small BitTorrent client made in Python. It connects to peers, downloads p
 * Works for single or multi-file torrents
 * Shows basic progress while downloading
 
-## How to run
+## to use (ik you know alr)
 
 ```bash
 git clone https://github.com/yourusername/bittorrent-client.git
@@ -21,7 +19,7 @@ pip install -r requirements.txt
 python main.py yourfile.torrent
 ```
 
-## Folder layout
+## file structure
 
 ```
 bittorrent-client/
@@ -33,7 +31,7 @@ bittorrent-client/
 └── main.py
 ```
 
-## Uses
+## Get these first
 
 bencodepy
 requests
@@ -43,5 +41,3 @@ async-timeout
 ## License
 
 MIT, do whatever basically.
-
----
